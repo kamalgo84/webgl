@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app id="WebApp_ID" 
+		 version="2.5" xmlns="java.sun.com/xml/ns/javaee"
+		 xmlns:xsi="w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="java.sun.com/xml/ns/javaee java.sun.com/xml/ns/javaee/web-app_2_5.xsd"> 
+
+  <display-name>servicing</display-name>
+  
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:META-INF/spring/applicationContext*.xml</param-value>
+  </context-param>
+
+
+  
+  <servlet>
+    <servlet-name>kweb</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/spring/webmvc-config.xml</param-value>
+      </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>CXFServlet</servlet-name>
+    <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>remoting</servlet-name>
+   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	<load-on-startup>2</load-on-startup>
+  </servlet>
+    
+  
+   <servlet-mapping>
+    <servlet-name>kweb</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+        <servlet-name>CXFServlet</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>remoting</servlet-name>
+    <url-pattern>/remoting/*</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

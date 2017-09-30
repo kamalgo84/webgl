@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<!-- The controllers are autodetected POJOs labeled with the @Controller 
+		annotation. -->
+	<context:component-scan base-package="com.kamal.web.servicing"
+		use-default-filters="false">
+		<context:include-filter expression="org.springframework.stereotype.Controller"
+			type="annotation" />
+	</context:component-scan>
+
+	
+	<mvc:annotation-driven />
+
+	<mvc:resources location="/estaticos/" mapping="/estaticos/**" />
+
+
+
+
+
+
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/views/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+<!-- 	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver" p:order="1"> -->
+<!-- 		<property name="mediaTypes"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="xml" value="application/xml" /> -->
+<!-- 				<entry key="json" value="application/json" /> -->
+<!-- 				<entry key="jsonp" value="application/javascript" /> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="defaultViews"> -->
+<!-- 			<list> -->
+<!-- 				<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"></bean> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+
+	<!-- allows for integration of file upload functionality -->
+<!-- 	<bean -->
+<!-- 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" -->
+<!-- 		id="multipartResolver" /> -->
+
+</beans>

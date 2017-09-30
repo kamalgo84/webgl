@@ -1,0 +1,5 @@
+{
+	"Shaders" : {
+		"basicVertexShader":"    attribute vec3 aVertexPosition;    attribute vec4 aVertexColor;	attribute vec3 aVertexNormal;	attribute vec2 aVertexTexture;		uniform mat4 uNormalMatrix;    uniform mat4 uMVMatrix;    uniform mat4 uPMatrix;	uniform mat4 uLightMatrix;	uniform vec3 uAmbientColor;	uniform vec3 uPointLightingLocation;	uniform vec3 uDirectionalColor;	uniform float uMaterialShininess;	uniform vec3 uPointLightingSpecularColor;	uniform bool uUsarLuzEspecular;	uniform bool uUsarLuz;	varying highp vec4 vColor;	varying highp vec4 v_normal;	varying highp vec2 vTextureCoord;	varying vec3 vLightWeighting;	varying vec4 vPosition;		 varying highp vec3 vLighting;    void main(void) 	{		vPosition = uMVMatrix * vec4(aVertexPosition, 1.0);		gl_Position = uPMatrix * vPosition;				vTextureCoord = aVertexTexture;        vColor = aVertexColor;	    v_normal = uNormalMatrix * vec4(aVertexNormal, 1.0);		    }"
+	}
+}

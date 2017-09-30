@@ -1,0 +1,5 @@
+{
+"Shaders" : {
+"basicVertexShader":"attributevec3aVertexPosition;attributevec4aVertexColor;attributevec3aVertexNormal;attributevec2aVertexTexture;uniformmat4uNormalMatrix;uniformmat4uMVMatrix;uniformmat4uPMatrix;uniformmat4uLightMatrix;uniformvec3uAmbientColor;uniformvec3uPointLightingLocation;uniformvec3uDirectionalColor;uniformfloatuMaterialShininess;uniformvec3uPointLightingSpecularColor;uniformbooluUsarLuzEspecular;uniformbooluUsarLuz;varyinghighpvec4vColor;varyinghighpvec4v_normal;varyinghighpvec2vTextureCoord;varyingvec3vLightWeighting;varyingvec4vPosition;varyinghighpvec3vLighting;voidmain(void){vPosition=uMVMatrix*vec4(aVertexPosition,1.0);gl_Position=uPMatrix*vPosition;vTextureCoord=aVertexTexture;vColor=aVertexColor;v_normal=uNormalMatrix*vec4(aVertexNormal,1.0);}"
+}
+}

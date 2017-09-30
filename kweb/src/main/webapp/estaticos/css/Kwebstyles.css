@@ -1,0 +1,137 @@
+@CHARSET "ISO-8859-1";
+
+.claseCapaDatos 
+{
+    background: #FFF2E2;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #FFDDAB;
+}
+.claseCeldaDatos
+{
+	padding: 10px;
+	font-family: "Arial", Times, serif;
+  font-weight: bold;
+}
+.claseAlignTop0
+{
+    padding-top: 0px;
+}
+
+.divTitulo
+{
+	border: 2px solid;
+    border-radius: 5px;
+    border-color: #FFDDAB;
+}
+.textoNegrita
+{
+	 font-weight: bold;  
+	 font-family: "Arial", Times, serif;
+}
+.saltoLinea {
+clear: both;
+float: none;
+}
+.cajaTexto
+{
+	background: #FFF;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #FFDDAB;
+}
+.muestraColor
+{
+	width: 30px;
+	height: 20px;
+	border: solid;
+	border-width: 1px;
+	border-color: #FFDDAB;
+	border-radius: 2px;
+}
+.divContenedor
+{
+	
+}
+
+
+
+
+.interior{
+padding: 5px;
+}
+.marginTop60 {
+margin-top: 60px !important;
+}
+.marginTop40 {
+margin-top: 40px !important;
+}
+.marginTop20 {
+margin-top: 20px !important;
+}
+.marginTop15 {
+margin-top: 15px !important;
+}
+.marginTop10 {
+margin-top: 10px !important;
+}
+.marginTop5 {
+margin-top: 5px !important;
+}
+
+.marginLeft60 {
+margin-left: 60px !important;
+}
+.marginLeft40 {
+margin-left: 40px !important;
+}
+.marginLeft20 {
+margin-left: 20px !important;
+}
+.marginLeft15 {
+margin-left: 15px !important;
+}
+.marginLeft10 {
+margin-left: 10px !important;
+}
+.marginLeft5 {
+margin-left: 5px !important;
+}
+
+.marginRight60 {
+margin-right: 60px !important;
+}
+.marginRight40 {
+margin-right: 40px !important;
+}
+.marginRight20 {
+margin-right: 20px !important;
+}
+.marginRight15 {
+margin-right: 15px !important;
+}
+.marginRight10 {
+margin-right: 10px !important;
+}
+.marginRight5 {
+margin-right: 5px !important;
+}
+
+.marginBottom60 {
+margin-bottom: 60px !important;
+}
+.marginBottom40 {
+margin-bottom: 40px !important;
+}
+.marginBottom20 {
+margin-bottom: 20px !important;
+}
+.marginBottom15 {
+margin-bottom: 15px !important;
+}
+.marginBottom10 {
+margin-bottom: 10px !important;
+}
+.marginBottom5 {
+margin-bottom: 5px !important;
+}
